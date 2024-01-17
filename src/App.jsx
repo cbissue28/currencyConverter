@@ -1,12 +1,28 @@
-import { Button, Container, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import InputAmount from './components/InputAmount'
 import SelectCountry from './components/SelectCountry'
 import SwitchCurrency from './components/SwitchCurrency'
-import { positions } from '@mui/system'
+import { useContext, useEffect } from 'react';
+import { CurrencyContext } from './context/CurrencyContext';
 
 function App() {
+  const {
+    fromCurrency,
+    setFromCurrency,
+    toCurrency,
+    setToCurrency,
+    firstAmount,
+    setFirstAmount
+  } = useContext(CurrencyContext)
+  console.log(firstAmount)
+
+  useEffect(() => {
+
+  }, [firstAmount])
+
   const boxStyles = {
     background: "white",
+    marginTop: "10rem",
     textAlign:"center",
     color: "black",
     minHeight: "20rem",
@@ -21,8 +37,9 @@ function App() {
       <Typography variant="h5" sx={{ marginBottom: "2rem"}}>Currency Converter</Typography>
       <Grid container spacing={2}>
         <InputAmount />
-        <SelectCountry />
+        <SelectCountry value={fromCurrency} setValue={setFromCurrency} label="From" />
         <SwitchCurrency />
+        <SelectCountry value={toCurrency} setValue={setToCurrency} label="To" />
       </Grid>
     </Container>
   )
