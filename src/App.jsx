@@ -51,7 +51,7 @@ function App() {
 
   return (
     <Container maxWidth="md" sx={boxStyles}>
-      <Typography variant="h5" sx={{ marginBottom: "2rem", fontFamily: }}>Currency Converter</Typography>
+      <Typography variant="h5" sx={{ marginBottom: "2rem" }}>Currency Converter</Typography>
       <Grid container spacing={2}>
         <SelectCountry value={fromCurrency} setValue={setFromCurrency} label="From" />
         <InputAmount />
