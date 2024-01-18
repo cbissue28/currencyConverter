@@ -30,8 +30,8 @@ const SelectCountry = (props) => {
        value={value}
        disableClearable
        onChange={(event, newValue) => {
-        setValue(newValue)
-       }}
+          setValue(newValue);
+        }}
        options={dataCountries}
        renderInput={(params) => <TextField {...params} label={label} />}
        />
