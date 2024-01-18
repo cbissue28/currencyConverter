@@ -21,7 +21,7 @@ const SwitchCurrency = () => {
             borderRadius: 1,
             height: "100%"
         }}>
-        <CompareArrowsIcon sx={{ fontSize: 30 }} />
+        <CompareArrowsIcon sx={{ fontSize: 35 }} />
         </Button>
     </Grid>
   )

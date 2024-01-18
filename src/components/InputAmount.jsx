@@ -1,4 +1,4 @@
-import { Grid, InputAdornment, TextField } from "@mui/material"
+import { Grid, TextField } from "@mui/material"
 import { useContext } from "react"
 import { CurrencyContext } from "../context/CurrencyContext"
 
@@ -13,7 +13,6 @@ const InputAmount = () => {
         fullWidth
         InputProps={{
             type: "number",
-            startAdornment: <InputAdornment position="start">£</InputAdornment>
             }}
         />
     </Grid>
